@@ -159,7 +159,7 @@ public class SwiftImageCarouselVC: UIPageViewController {
 
     // MARK: - Setup page control
     func setupPageControl() {
-        view.backgroundColor = .white
+        view.backgroundColor = .clear
         // Default appearance
         let appearance = UIPageControl.appearance()
         appearance.pageIndicatorTintColor = .orange
