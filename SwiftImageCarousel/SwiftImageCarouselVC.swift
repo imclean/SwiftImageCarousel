@@ -58,7 +58,7 @@ public class SwiftImageCarouselVC: UIPageViewController {
     public var noImage: UIImage? = nil
 
     /// Enables resetting the UIViewContentMode of SwiftImageCarouselItemVC UIViewContentMode. The default is .scaleAspectFit.
-    public var contentMode: UIViewContentMode = .scaleAspectFit
+    public var contentMode: UIViewContentMode = .scaleAspectFill
 
     // MARK: - Timer properties
     /// The timer that is used to move the next page item.
@@ -68,7 +68,7 @@ public class SwiftImageCarouselVC: UIPageViewController {
     public var isTimerOn = true
 
     /// The interval on which the view changes when the timer is on. Default value is 3 seconds.
-    public var swipeTimeIntervalSeconds = 3.0
+    public var swipeTimeIntervalSeconds = 2.0
 
     /// This variable keeps track of the index used in the page control in terms of the array of URLs.
     fileprivate var pageIndicatorIndex = 0
@@ -165,6 +165,8 @@ public class SwiftImageCarouselVC: UIPageViewController {
         appearance.pageIndicatorTintColor = .orange
         appearance.currentPageIndicatorTintColor = .gray
         appearance.backgroundColor = .clear
+        appearance.tintColor = .clear
+        
 
         // Custom appearance setup with delegation from outside this framework.
         let firstAppearance = UIPageControl.appearance(whenContainedInInstancesOf: [SwiftImageCarouselVC.self])
@@ -194,6 +196,15 @@ public class SwiftImageCarouselVC: UIPageViewController {
     }
     
     override public var prefersStatusBarHidden : Bool { return true }
+    
+    override public func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        for view in self.view.subviews {
+            if view is UIPageControl {
+                view.backgroundColor = .clear
+            }
+        }
+    }
 }
 
 // MARK: - UIPageViewControllerDataSource
