@@ -42,7 +42,13 @@ extension UIImageView {
                 self.image = cachedImage
             } else {
                 return downloadImageAsync(contentsOf: encodedUrl) { image in
-                    self.image = image
+                    UIView.transition(with: self,
+                                      duration: 0.3,
+                                      options: .transitionCrossDissolve,
+                                      animations: {
+                                        self.image = image
+                    },
+                                      completion: nil)
                     imageCache.setObject(image, forKey: encodedUrl as NSString, cost: 1)
                 }
             }
