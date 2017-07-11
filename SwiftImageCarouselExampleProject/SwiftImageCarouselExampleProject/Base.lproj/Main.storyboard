@@ -20,19 +20,7 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5u0-z1-Kap">
-                                <rect key="frame" x="0.0" y="153" width="375" height="378"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </view>
-                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="5u0-z1-Kap" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="133" id="AGQ-IU-NOt"/>
-                            <constraint firstAttribute="trailing" secondItem="5u0-z1-Kap" secondAttribute="trailing" id="CdM-hA-5Od"/>
-                            <constraint firstItem="5u0-z1-Kap" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="PcU-XY-T8M"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5u0-z1-Kap" secondAttribute="bottom" constant="136" id="xI5-hT-qhK"/>
-                        </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="bGH-DX-lu5"/>

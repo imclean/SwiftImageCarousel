@@ -200,7 +200,9 @@ public class SwiftImageCarouselVC: UIPageViewController {
     override public func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         for view in self.view.subviews {
-            if view is UIPageControl {
+            if view is UIScrollView {
+                view.frame = CGRect(x: view.frame.minX , y: view.frame.minY, width: view.frame.width, height: view.frame.height + 37)
+            } else if view is UIPageControl {
                 view.backgroundColor = .clear
             }
         }
