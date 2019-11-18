@@ -7,9 +7,9 @@ All SwiftImageCarousel needs from you is to supply it with valid image URLs and 
 s.authors    = { "Deyan Aleksandrov" => "deyanaaleksandrov@gmail.com", "Gavril Tonev" => "gtonev@centroida.co" }
 s.homepage     = "https://github.com/Centroida/SwiftImageCarousel"
 s.license      = "MIT"
-s.platform     = :ios, "10"
+s.platform     = :ios, "13"
 s.source       = { :git => "https://github.com/Centroida/SwiftImageCarousel.git", :tag => "#{s.version}" }
 s.source_files = "SwiftImageCarousel", "SwiftImageCarousel/**/*.{h,m,swift}"
 s.resources = ["SwiftImageCarousel/**/*.storyboard"]
-s.pod_target_xcconfig = { 'SWIFT_VERSION' => '3' }
+s.pod_target_xcconfig = { 'SWIFT_VERSION' => '5' }
 end
