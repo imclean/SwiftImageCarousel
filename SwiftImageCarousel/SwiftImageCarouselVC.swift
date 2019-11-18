@@ -58,7 +58,7 @@ public class SwiftImageCarouselVC: UIPageViewController {
     public var noImage: UIImage? = nil
 
     /// Enables resetting the UIViewContentMode of SwiftImageCarouselItemVC UIViewContentMode. The default is .scaleAspectFit.
-    public var contentMode: UIViewContentMode = .scaleAspectFill
+    public var contentMode: UIView.ContentMode = .scaleAspectFill
 
     // MARK: - Timer properties
     /// The timer that is used to move the next page item.

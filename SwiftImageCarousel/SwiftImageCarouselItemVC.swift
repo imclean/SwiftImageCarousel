@@ -27,7 +27,7 @@ public class SwiftImageCarouselItemVC: UIViewController {
     var showModalGalleryOnTap = true
 
     /// Enables resetting the UIViewContentMode of SwiftImageCarouselItemVC UIViewContentMode. The default is .scaleAspectFit
-    var contentMode: UIViewContentMode = .scaleAspectFit
+    var contentMode: UIView.ContentMode = .scaleAspectFit
 
     /// The array with the image URLs, passed to the GalleryVC.
     public var contentImageURLs: [String]!
