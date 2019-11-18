@@ -19,7 +19,7 @@ class SwiftImageCarouselGalleryVCTests: XCTestCase {
         contentImageURLs = [String](repeating: "m", count: 100)
         
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle(for: GalleryVC.self))
-        vc = storyboard.instantiateViewController(withIdentifier: "GalleryVC") as! GalleryVC
+        vc = storyboard.instantiateViewController(withIdentifier: "GalleryVC") as? GalleryVC
         
         vc.contentImageURLs = contentImageURLs
         let _ = vc.view
@@ -56,10 +56,4 @@ class SwiftImageCarouselGalleryVCTests: XCTestCase {
         XCTAssertNil(vc.pageViewController(pageViewController, viewControllerBefore: viewController))
     }
     
-    func testZoom() {
-        let vc = GalleryItemVC()
-        let scrollView = UIScrollView()
-        vc.contentImageView = UIImageView()
-        XCTAssertNotNil(vc.viewForZooming(in: scrollView))
-    }
 }

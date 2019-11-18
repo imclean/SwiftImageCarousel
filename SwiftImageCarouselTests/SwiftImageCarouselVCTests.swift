@@ -22,7 +22,7 @@ class SwiftImageCarouselVCTests: XCTestCase {
         contentImageURLs = [String](repeating: "<URL STRING>", count: testImagesURLsCount)
         
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle(for: SwiftImageCarouselVC.self))
-        vc = storyboard.instantiateInitialViewController() as! SwiftImageCarouselVC
+        vc = storyboard.instantiateInitialViewController() as? SwiftImageCarouselVC
         
         vc.contentImageURLs = contentImageURLs
         vc.loadPageViewController()
